@@ -27,7 +27,8 @@ const env = () => {
       return 'mobile' // mobile
     }
     
-    return 'pc' // pc
+    // pc
+    return 'pc' 
 }
 
 export default env
