@@ -17,5 +17,7 @@
 - [x] [await 捕获异常](https://github.com/yangfandashuaige/utils/blob/master/awaitCatch.js) 
 - [x] [H5判断当前的环境](https://github.com/yangfandashuaige/utils/blob/master/env.js)
 - [x] [存取session\local](https://github.com/yangfandashuaige/utils/blob/master/storage.js)
+- [x] [上传OSS base64文件转图片](https://github.com/yangfandashuaige/utils/blob/master/uploadOssBase64.js)
+- [x] [接口header字段加密](https://github.com/yangfandashuaige/utils/blob/master/encryption.js)
 - [ ] 再接再厉 :smile:	:smile:	:smile:	
 
