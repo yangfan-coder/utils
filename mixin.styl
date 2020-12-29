@@ -1,0 +1,154 @@
+// 超过行数...
+lineEllipsis($line) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+}
+
+// 背景图片地址和大小
+bis($url) { 
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+//定位全屏
+allcover() {
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+//定位上下左右居中
+center() {  
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+ct() {  
+	position: absolute;
+	top: 50%;
+  transform: translateY(-50%);
+}
+
+//定位左右居中
+cl() {  
+	position: absolute;
+	left: 50%;
+  transform: translateX(-50%);
+}
+
+//宽高
+wh($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+//字体大小、行高、字体
+
+
+//字体大小，颜色
+sc($size, $color) {
+	font-size: $size;
+	color: $color;
+}
+
+//flex 布局和 子元素 对其方式
+// 清除浮动
+clearfix() {
+	zoom: 1; 
+	&:after{
+		content: ""; 
+		display: block; 
+		height: 0; 
+		clear: both; 
+		visibility: hidden;  
+  }
+}
+/* 【下】边框1px  默认颜色  #F1F2F6 */
+border-bom-1px($color= #F1F2F6){
+  position relative
+  &:after{
+    content  ''
+    height  1px
+    background $color
+    position absolute
+    left 0
+    bottom 0
+    width 100%
+    transform scaleY(0.5)
+  }
+}
+
+/* 【上】边框1px  默认颜色  #F1F2F6 */
+border-top-1px($color= #F1F2F6){
+  position relative
+  &:after{
+    content  ''
+    height  1px
+    background $color
+    position absolute
+    left 0
+    top 0
+    width 100%
+    transform scaleY(0.5)
+  }
+}
+/* 【左】边框1px  默认颜色  #F1F2F6 */
+border-left-1px($color= #F1F2F6,$y=0.7){
+  position relative
+  &:after{
+    content  ''
+    background $color
+    position absolute
+    left 0
+    top 0
+    width 1px
+    height 100%;
+    transform scaleY($y)
+  }
+}  
+/* 【右】边框1px  默认颜色  #F1F2F6 */
+border-right-1px($color= #F1F2F6){
+  position relative
+  &:after{
+    content  ''
+    background $color
+    position absolute
+    right 0
+    top 0
+    width 1px
+    height 100%;
+    transform scaleY(0.5)
+  }
+} 
+/* 椭圆形边框  1px 默认颜色：#F1F2F6  椭圆的弧度 44px*/
+border-radius-mixin($color= #F1F2F6,$radius = 44px){
+  position relative
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid $color;
+    border-radius: $radius * 2;
+    width: 200%;
+    height: 199%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+  }
+}  
+
